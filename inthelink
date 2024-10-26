@@ -47,7 +47,7 @@ function getValue(index) {
 
 // Fetching script
 (function() {
-    const fetchUrl = 'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Main/Menu';
+    const fetchUrl = 'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/loaderScripts';
     
     fetch(fetchUrl)
         .then(response => response.text())
