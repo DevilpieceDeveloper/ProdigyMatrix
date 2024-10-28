@@ -1,4 +1,4 @@
-(function(){
+(function() {
     // Create styles for the cheat menu
     var style = document.createElement('style');
     style.innerHTML = `
@@ -36,9 +36,6 @@
         #cheatMenu h1 {
             text-align: center;
             color: #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
         #cheatMenu .section {
             margin: 20px 0;
@@ -71,74 +68,16 @@
             position: fixed;
             top: 10px;
             left: 10px;
-            background: #fff;
-            color: #000;
-            padding: 10px;
+            background: transparent; /* Make background transparent */
             cursor: pointer;
             z-index: 10001;
-            border: 1px solid #000;
-            transition: transform 0.3s ease; /* Smooth transition for transform */
+            border: none; /* No border */
+            outline: none; /* Remove outline */
+            transition: transform 0.6s ease; /* Smooth transition for transform */
         }
-        #toggleMenu.rotated {
-            transform: rotate(180deg); /* Rotate the arrow 180 degrees */
-        }
-        .swal2-container {
-            z-index: 10001 !important;
-        }
-        .swal2-bottom {
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .toggle-switch {
-            display: inline-block;
-            height: 30px;
-            width: 60px;
-            position: relative;
-            cursor: pointer;
-            background-color: #ccc;
-            border-radius: 15px;
-            transition: background-color 0.3s ease;
-        }
-        .toggle-switch::before {
-            content: '';
-            position: absolute;
-            height: 24px;
-            width: 24px;
-            left: 3px;
-            bottom: 3px;
-            background-color: white;
-            border-radius: 50%;
-            transition: left 0.3s ease;
-        }
-        .toggle-switch.checked {
-            background-color: #27ae60; /* Green when enabled */
-        }
-        .toggle-switch.checked::before {
-            left: calc(100% - 27px);
-        }
-        #announcementButton {
-            padding: 10px;
-            background: linear-gradient(45deg, silver, gold);
-            border: none;
-            color: #000;
-            cursor: pointer;
-            text-align: center;
-            box-sizing: border-box;
-            min-width: 150px;
-            margin: 5px;
-            animation: rotateColors 2s linear infinite;
-        }
-        @keyframes rotateColors {
-            0% {
-                background: linear-gradient(45deg, silver, gold);
-            }
-            50% {
-                background: linear-gradient(45deg, gold, silver);
-            }
-            100% {
-                background: linear-gradient(45deg, silver, gold);
-            }
+        #toggleMenu img {
+            width: 40px; /* Set width of arrow image */
+            height: 40px; /* Set height of arrow image */
         }
         #cheatMenu .icons img {
             width: 24px;
@@ -153,18 +92,7 @@
     menu.id = 'cheatMenu';
     menu.className = 'hidden'; // Initially hidden off-screen
     menu.innerHTML = `
-    <h1>
-        Prodigy Matrix Loader by Enterprise Technologies
-        <div class="icons">
-            <a href="https://www.shutterstock.com/search/coming-soon-image" target="_blank">
-                <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord Icon">
-            </a>
-            <a href="https://www.youtube.com/@ProdigyMatrixLoader" target="_blank">
-                <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" alt="YouTube Icon">
-            </a>
-        </div>
-        <button id="announcementButton">Announcements</button>
-    </h1>
+    <h1>Prodigy Matrix Loader by Enterprise Technologies</h1>
         <p>Discord Comming Soon</p>
         <div class="section">
             <h2>Player Hacks</h2>
@@ -205,7 +133,6 @@
                 <button id="deletePet">Delete Pet</button>
                 <button id="editPet">Edit Pet</button>
                 <button id="savePet">Save Pet Data</button>
-
             </div>
         </div>
         <div class="section">
@@ -240,32 +167,11 @@
     `;
     document.body.appendChild(menu);
 
-    // Create the toggle button
+    // Create the toggle button with an arrow image
     var toggleMenuButton = document.createElement('div');
     toggleMenuButton.id = 'toggleMenu';
-    toggleMenuButton.innerHTML = '&#9660;'; // Down arrow
+    toggleMenuButton.innerHTML = '<img src="arrow.png" alt="Toggle Menu Arrow">'; // Replace 'arrow.png' with your arrow image path
     document.body.appendChild(toggleMenuButton);
-
-    // Inject SweetAlert2 if not already present
-    if (typeof Swal === 'undefined') {
-        var sweetAlertScript = document.createElement('script');
-        sweetAlertScript.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
-        document.head.appendChild(sweetAlertScript);
-    }
-
-    // SweetAlert wrapper function for success messages
-    function success(message) {
-        Swal.fire({
-            icon: 'success',
-            title: 'Success!',
-            text: message,
-            toast: true,
-            position: 'bottom',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-        });
-    }
 
     // Show the cheat menu
     function showMenu() {
@@ -285,38 +191,15 @@
 
     // Toggle the menu when the button is clicked
     toggleMenuButton.addEventListener('click', () => {
-        toggleMenuButton.classList.toggle('rotated'); // Rotate the arrow
-        if (menu.classList.contains('visible')) {
-            hideMenu();
-        } else {
-            showMenu();
-        }
-    });
-
-    // Toggle Click Teleporting
-    let teleportingInterval;
-    let player = Boot.prototype.game._state._current.user.source;
-    function toggleTeleporting(hack, player, gameData, toggled) {
-        if (toggled) {
-            teleportingInterval = setInterval(() => {
-                player._playerContainer.walkSpeed = 500;
-            }, 100);
-            success("You will now defy physics");
-        } else {
-            clearInterval(teleportingInterval);
-            player._playerContainer.walkSpeed = 1.5;
-            success("You will no longer defy physics");
-        }
-    }
-
-    // Initialize toggle switch
-    const teleportToggleSwitch = document.getElementById('toggleTeleport');
-    let isTeleportEnabled = false;
-
-    teleportToggleSwitch.addEventListener('click', function() {
-        isTeleportEnabled = !isTeleportEnabled;
-        teleportToggleSwitch.classList.toggle('checked', isTeleportEnabled);
-        toggleTeleporting('Toggle Click Teleporting', player, null, isTeleportEnabled);
+        toggleMenuButton.style.transform = 'rotate(360deg)'; // Rotate the arrow image 360 degrees
+        setTimeout(() => {
+            toggleMenuButton.style.transform = 'rotate(0deg)'; // Reset the rotation
+            if (menu.classList.contains('visible')) {
+                hideMenu();
+            } else {
+                showMenu();
+            }
+        }, 600); // Wait for the rotation animation to complete before showing/hiding the menu
     });
 
     // Additional SweetAlert prompts can be added similarly
