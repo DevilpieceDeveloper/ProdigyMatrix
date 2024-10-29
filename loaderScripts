@@ -4,7 +4,7 @@ javascript:(async function() {
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/loadingwords/loader',
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/advancedSelector',
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Teleport-to-world',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Permanent-Morph',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Permanent-Morph',
         'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Set%20Level%20Button',
         'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Uncap%20Level',
         'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Remove-Item',
