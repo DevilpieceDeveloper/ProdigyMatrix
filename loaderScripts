@@ -7,7 +7,7 @@ javascript:(async function() {
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Permanent-Morph',
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/setLevel',
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/UncapLevel',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Remove-Item',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/removeItems',
         'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Delete-Pet',
         'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Add-Pet',
         'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Clear-Inventory',
