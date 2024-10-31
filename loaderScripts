@@ -1,4 +1,4 @@
-//Custom Load Screen *Fetch The Script*
+// Custom Load Screen *Fetch The Script*
 javascript:(async function() {
     var scriptUrls = [
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/loadingwords/loader',
@@ -8,43 +8,43 @@ javascript:(async function() {
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/setLevel',
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/UncapLevel',
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/removeItems',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Delete-Pet',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Add-Pet',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Clear-Inventory',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Obtain-Furniture',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Item-Stacker',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Find-UserID',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Get-All-Pets',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Main/Sweet%20Alert',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Bounty',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Member-Star',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Spins',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Delete-Pet',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Add-Pet',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Clear-Inventory',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Obtain-Furniture',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Item-Stacker',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Find-UserID',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Get-All-Pets',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Sweet%20Alert',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Bounty',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Member-Star',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Spins',
         'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Bobified',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Walk-Speed',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Reset',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Set%20Name',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Max%20account',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/basic%20item',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Clear%20Pets',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Dark%20Tower',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Change%20Name',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Escape%20Battle',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Save%20Inventory',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Set%20Grade',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Pet%20Slots',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Complete%20Quest',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Dino%20100%20Days',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Dino%20Walk%20Speed',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Duplicate%20Acc',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Set%20Gold',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/End%20Dino',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/PVP%20Hp',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/234f8994ad5c287d98eb4142bf48ee4110fabe3a/Hacks/Edit%20pet',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Save%20pet%20data',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Kick%20Player%20',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Hacks/Charge%20Level',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Main/addFusion',
-        'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/refs/heads/main/Hacks/FixBattle',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Walk-Speed',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Reset',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Set%20Name',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Max%20account',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/basic%20item',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Clear%20Pets',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Dark%20Tower',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Change%20Name',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Escape%20Battle',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Save%20Inventory',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Set%20Grade',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Pet%20Slots',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Complete%20Quest',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Dino%20100%20Days',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Dino%20Walk%20Speed',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Duplicate%20Acc',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Set%20Gold',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/End%20Dino',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/PVP%20Hp',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Edit%20pet',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Save%20pet%20data',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Kick%20Player%20',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Charge%20Level',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/addFusion',
+        'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/FixBattle',
     ];
 
     for (const url of scriptUrls) {
@@ -64,9 +64,9 @@ javascript:(async function() {
     var hack = Boot.prototype.game;
 })();
 
-//Load Cheat Menu *Fetch The Script*
+// Load Cheat Menu *Fetch The Script*
 javascript:(function() {
-    var scriptUrl = 'https://raw.githubusercontent.com/PXIFusionX/Fusion-Loader/main/Cheat-Menu/Menu';
+    var scriptUrl = 'https://raw.githubusercontent.com/DevilpieceDeveloper/ProdigyMatrix/refs/heads/main/customized/Menu';
     fetch(scriptUrl)
         .then(response => response.text())
         .then(scriptContent => {
